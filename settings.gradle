@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Test Library Feature"
 include ':app'
+include ':hellogiver'
