@@ -6,11 +6,7 @@ import kotlin.NoSuchElementException
 
 class HelloGiverActivityProvider {
 
-    private var loader: ServiceLoader<HelloGiverActivityService>? = null
-
-    init {
-        loader = ServiceLoader.load(HelloGiverActivityService::class.java)
-    }
+    private var loader: ServiceLoader<HelloGiverActivityService>? = ServiceLoader.load(HelloGiverActivityService::class.java)
 
     fun serviceImpl(): HelloGiverActivityService {
         return loader?.iterator()?.next() ?: throw NoSuchElementException("No implementation for GreetingsProvider")

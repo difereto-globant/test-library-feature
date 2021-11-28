@@ -2,6 +2,8 @@ package com.gap.testlibraryfeature
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.gap.hellogiver.gateway.HelloGiverActivityService
+import com.gap.hellogiver.gateway.provider.HelloGiverActivityProvider
 import com.gap.testlibraryfeature.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
@@ -14,17 +16,8 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.container, MainFragment.newInstance())
                 .commitNow()
         }
+
+        val test: HelloGiverActivityService = HelloGiverActivityProvider.getInstance().serviceImpl()
+        test.launchHelloGiverActivity(this, "Diego Recalde")
     }
-}
-
-sealed class CardState {
-
-    data class CardWithBalance(
-        val cardId: String
-    ) : CardState()
-
-    object UnderReview : CardState()
-    object Rejected : CardState()
-    data class Approved(val cardId: String) : CardState()
-    data class NotRegistered(val cardId: String) : CardState()
 }
