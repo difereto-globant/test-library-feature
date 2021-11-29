@@ -6,7 +6,7 @@ import com.gap.hellogiver.HelloGiverActivity
 import com.gap.hellogiver.gateway.HelloGiverActivityService
 import com.gap.hellogiver.gateway.HelloGiverActivityService.HelloProvider
 
-internal class HelloGiverActivityServiceImpl : HelloGiverActivityService {
+class HelloGiverActivityServiceImpl : HelloGiverActivityService {
 
     override val type: HelloProvider = HelloProvider.HelloGiver
 
