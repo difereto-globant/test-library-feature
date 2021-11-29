@@ -1,1 +1,2 @@
 com.gap.hellogiver.gateway.impl.HelloGiverActivityServiceImpl
+com.gap.hellogiver.gateway.impl.HelloDescActivityServiceImpl

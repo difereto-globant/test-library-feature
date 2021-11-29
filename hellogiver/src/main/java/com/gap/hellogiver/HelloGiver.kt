@@ -1,12 +1,12 @@
 package com.gap.hellogiver
 
-object HelloGiver {
+internal object HelloGiver {
 
     fun sayHi(): String {
-        return "Hi!"
+        return "Hi"
     }
 
     fun sayHello(): String {
-        return "Hello!"
+        return "Hello"
     }
 }
