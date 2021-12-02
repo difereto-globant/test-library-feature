@@ -35,7 +35,7 @@ class MainFragment : Fragment() {
 
         binding.buttonHelloGiver.setOnClickListener { launchHelloActivity(HelloGiver) }
         binding.buttonHelloDesc.setOnClickListener { launchHelloActivity(HelloDesc) }
-        
+
         val colorService = helloColorProvider.getColorServiceImpl()
         binding.buttonHelloGiver.setTextColor(resources.getColor(colorService.getPrimaryColor(), null))
     }
